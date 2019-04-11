@@ -124,12 +124,12 @@ const people = [
 ];
 
 const sortPeople = (arr) => {
-  people.sort((a, b) => {
-    if(a.lastName(this) > b.lastName(this)) return 1;
-    if(b.lastName(this) > a.lastName(this)) return -1;
+  arr.sort((a, b) => {
+    if(a.lastName > b.lastName) return 1;
+    if(b.lastName > a.lastName) return -1;
     return 0;
   });
-  return people;
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -143,7 +143,14 @@ If two people have the same full name, the younger one should come first. Do not
 ------------------------------------------------------------------------------------------------ */
 
 const sortPeopleBetter = (arr) => {
-  // Solution code here...
+  arr.sort((a, b) => {
+    let sort_a = a.lastName + a.firstName + a.age;
+    let sort_b = b.lastName + b.firstName + b.age;
+    if(sort_a > sort_b) return 1;
+    if(sort_a > sort_b) return -1;
+    return 0;
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -271,7 +278,7 @@ describe('Testing challenge 7', () => {
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should sort people with more strict ordering', () => {
     const family = [
       new Person('Casey', 'Codefellows', 55),
