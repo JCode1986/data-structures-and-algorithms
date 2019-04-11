@@ -133,17 +133,13 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  arr.forEach(function(num){
-    if(num % 3 === 0) {
-      arr.push('Fizz'); 
-      } else if(num % 5 === 0) {
-        arr.push('Buzz');
-        } else if(num % 3 === 0 && num % 5 === 0) {
-          arr.push('Fizz Buzz');
-      }
-    });
+  arr.forEach(function(num, idx){
+    if(arr[idx] % 15 === 0) {arr[idx] = 'Fizz Buzz'};
+    if(arr[idx] % 3 === 0) {arr[idx] = 'Fizz'}; 
+    if(arr[idx] % 5 === 0) {arr[idx] = 'Buzz'};
+  });
     return arr;
-  }
+}
     
 
 /* ------------------------------------------------------------------------------------------------
