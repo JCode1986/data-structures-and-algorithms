@@ -15,10 +15,7 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  let strSlice = str.slice(0)
-  for(let i = 0; 0 < result.length; i++){
-    strSlice;
-  }
+  //enter code
   return result;
 };
 
@@ -31,7 +28,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  // Solution code here...
+  return arr.split('');
 };
 
 
@@ -78,7 +75,14 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  for(let i =0; i < recipe.ingredients.length; i++){
+    let word = recipe.ingredients[i];
+    let firstSpaceIndex = word.indexOf(' ');
+    let stringWithoutFirstNumberAndSpace = word.slice(firstSpaceIndex + 1, word.length);
+    let secondSpaceIndex = stringWithoutFirstNumberAndSpace.indexOf(' ');
+    let stringWithoutSecondSpace = stringWithoutFirstNumberAndSpace.slice(secondSpaceIndex + 1, stringWithoutFirstNumberAndSpace.length);
+    result.push(stringWithoutSecondSpace)
+  }
   return result;
 };
 
@@ -92,7 +96,11 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  for(let i = 0; i < recipe.ingredients.length; i++){
+    let word = recipe.ingredients[i];
+    let noSpace = word.split(' ');
+    result.push(noSpace.splice(2).join(' '));
+  }
   return result;
 };
 
@@ -108,7 +116,11 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 
 const stepActions = (recipe) => {
   let result = [];
-  // Solution code here...
+  for(let i = 0; i < recipe.steps.length; i++){
+    let word = recipe.steps[i]
+    let firstString = word.split(' ');
+    result.push(firstString[0]);
+  }
   return result;
 };
 
@@ -208,7 +220,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return an array of individual letters', () => {
     expect(wordsToCharList('Gregor')).toStrictEqual(['G', 'r', 'e', 'g', 'o', 'r']);
     expect(wordsToCharList('Gregor').length).toStrictEqual(6);
@@ -217,27 +229,27 @@ xdescribe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should return a list of foods', () => {
     expect(listFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
     expect(listFoods(gruffaloCrumble).length).toStrictEqual(11);
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return a list of foods', () => {
     expect(splitFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return a list of recipe steps', () => {
     expect(stepActions(gruffaloCrumble)).toStrictEqual(['Pre-heat', 'De-prickle', 'Sprinkle', 'Mix', 'Grease', 'Combine', 'Fold', 'Spread', 'Bake']);
     expect(stepActions(gruffaloCrumble).length).toStrictEqual(9);
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should remove the even numbers from the array', () => {
     let list = [1, 2, 3, 4, 5, 6];
     removeEvenValues(list);
