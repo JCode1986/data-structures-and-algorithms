@@ -87,7 +87,7 @@ const snorlaxData = {
 };
 
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
-  return arr.filter(function(value, index, array){
+  return arr.filter(function(value){
     if(minBaseStat < value.baseStat){
       return true;
     }
@@ -103,7 +103,11 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 ------------------------------------------------------------------------------------------------ */
 
 const getStatName = (arr, minBaseStat) => {
-  // Solution code here...
+  return arr.filter(function(value, index, array){
+    if(minBaseStat < value.baseStat){
+      return value.name; 
+    }
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -156,7 +160,11 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (arr) => {
-  // Solution code here...
+  return arr.filter(function(value, index, array){
+    if(value.children !== true){
+      return array;
+    }
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -168,7 +176,21 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 ------------------------------------------------------------------------------------------------ */
 
 const evenOddNumericValues = (arr) => {
-  // Solution code here...
+  return arr.filter(function(value, index, array){
+    if(value === /[a-zA-Z]/){
+    return false
+    } else {
+      return arr.map(function(value){
+        if(value === /[13579]/){
+          return 'odd';
+        } else {
+          if(value === /[24680]/){
+            return 'even';
+          }
+        }
+      })
+    }
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -239,7 +261,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return the name of the stats that exceed that maximum', () => {
     expect(getStatName(snorlaxData.stats, 50)).toStrictEqual([ 'special-defense', 'special-attack' ]);
     expect(getStatName(snorlaxData.stats, 50).length).toStrictEqual(2);
