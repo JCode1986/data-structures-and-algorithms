@@ -11,11 +11,9 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
-  for(let i = 0; i < arr.length; i++) {
-    let result = Math.pow(i, 2)
-    arr.push(result);
-  }
-  return arr;
+  // for(let i = 0; i < arr.length; i++) {
+  //   let result = i ** 2
+  //   arr.push(result);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -25,7 +23,10 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  // Solution code here...
+  arr.forEach(function(value) {
+    let result = Math.pow(value, 2)
+    arr.push(result);
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -188,7 +189,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return two raised to the power of the integer', () => {
     expect(forEachTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
     expect(forEachTwoToThe([0, 4, 5]).length).toStrictEqual(3);
