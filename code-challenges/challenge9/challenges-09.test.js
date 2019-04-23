@@ -86,8 +86,10 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (arr) => {
-  // return arr.reduce(function(acc, value, idx, array){
-
+  let str_split = arr.split('');
+  return str_split.reduce(function(acc, value){
+    return value + acc;
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -141,10 +143,11 @@ const characters = [
 
 const countNumberOfChildren = (arr) => {
   return arr.reduce(function(acc, value){
-    let total_children = acc + value.name
-    total_children.length;
-    return acc
-  }, []);
+    if(value.children === undefined){
+      return acc;
+    }
+    return acc + value.children.length;
+  }, 0);
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -156,11 +159,12 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 const calculateAverage = (arr) => {
-  arr.reduce(function(acc, value){
+  let count_sum = arr.reduce(function(acc, value){
     acc.count++
-    acc.sum += value
+    acc.sum += value;
     return acc;
-  }, {count: 0, sum: 0});
+  }, { count: 0, sum: 0 });
+  return count_sum.sum / count_sum.count;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -181,7 +185,13 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
-  // Solution code here...
+  return arr.reduce((acc, val) => {
+    if (isPrime(val)) {
+      return ++acc;
+    }
+
+    return acc;
+  }, 0)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -282,7 +292,7 @@ xdescribe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return a count of the prime numbers in the array', () => {
     expect(countPrimeNumbers([1, 2, 13, 64, 45, 56, 17, 8])).toStrictEqual(3);
   });
