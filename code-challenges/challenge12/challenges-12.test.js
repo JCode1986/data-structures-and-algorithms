@@ -24,7 +24,8 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   stores.reduce((acc, val, idx) => {
-
+    //will complete, just like the other one...
+    
   }, []);
 };
 
