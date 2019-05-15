@@ -1,18 +1,19 @@
 {
-  "name": "3-code-challenges",
+  "name": "node-apps",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest --coverage --verbose",
-    "watch": "jest --watchall"
+  "main": "promises.test.js",
+  "directories": {
+    "doc": "docs"
   },
-  "keywords": [
-    
-  ],
-  "author": "",
-  "license": "MIT",
   "dependencies": {
-    "jest": "^24.1.0"
-  }
+    "jest": "^24.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
