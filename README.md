@@ -21,4 +21,4 @@ Write a function called insertShiftArray which takes in an array and the value t
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## Solution
-<!-- Embedded whiteboard image -->
+![alt text](https://photos.app.goo.gl/Jv7q2P8TTYji8NLZ7)
