@@ -34,4 +34,4 @@ Implement a Singly Linked List Data Structure
 * `.append(value)` - utilized `while()` to traverse to the tail of the linked list
 
 ### Solution
-![alt text](https://files.slack.com/files-pri/T039KG69K-FL95UU16G/code_challenege_6.jpg)
+![Code-Challenge-6](./whiteboard-img/code-challenge-6.jpg)
