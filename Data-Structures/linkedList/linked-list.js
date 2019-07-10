@@ -47,6 +47,28 @@ class linkedList {
       return current.value.toString();
       }
     }
+
+    append(value){
+      if(!this.head) {
+        this.head = new Node(value)
+        return;
+      }
+      let current = this.head;
+      while(current.next){
+        current = current.next;
+      }
+      current.next = new Node(value)
+      this.tail = current.next;
+    }
+
+    insertBefore(value, newVal){
+      //
+    }
+
+    insertAfter(value, newVal){
+      //
+    }
+
 };
 
 
@@ -55,6 +77,7 @@ console.log(list)
 list.insert('foo');
 list.insert('bar');
 list.insert('hello');
+list.append(`what's up`)
 console.log(list);
 console.log(list.includes('foo'));
 console.log(list.includes('fooooo'));

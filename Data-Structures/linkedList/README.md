@@ -20,3 +20,18 @@ Implement a Singly Linked List Data Structure
 -insert method takes any value as an argument and adds a new node with that value to the head of the list
 -includes method takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value 
 -toString method takes in no arguments and returns a string representing all the values in the Linked List.
+
+# Code Challenge 06
+
+## Authors: Joseph Hangarter & Brandyn Vay
+
+### Challenge
+* `.append(value)` which adds a new node with the given value to the end of the list
+* `.insertBefore(value, newVal)` which add a new node with the given newValue immediately before the first value node
+* `.insertAfter(value, newVal)` which add a new node with the given newValue immediately after the first value node
+
+### Approach & Efficiency
+* `.append(value)` - utilized `while()` to traverse to the tail of the linked list
+
+### Solution
+![alt text](https://files.slack.com/files-pri/T039KG69K-FL95UU16G/code_challenege_6.jpg)
