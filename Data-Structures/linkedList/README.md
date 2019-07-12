@@ -1,3 +1,11 @@
+# Table of Contents
+
+1. [Code Challenge 06](#Code-Challenge-06)
+  * [link list insertions](https://github.com/JCode1986/data-structures-and-algorithms/blob/linked_list/Data-Structures/linkedList/linked-list.js)
+2. [Code Challenge 07](#Code-Challenge-07)
+  * [link list kth]()
+3. [Code Challenge 08](#Code-Challenge_08)
+
 # Singly Linked List
 Implement a Singly Linked List Data Structure
 
@@ -16,13 +24,11 @@ Implement a Singly Linked List Data Structure
 -for the toString method, is still complete at the moment
 
 ## API
-<!-- Description of each method publicly available to your Linked List -->
 -insert method takes any value as an argument and adds a new node with that value to the head of the list
 -includes method takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value 
 -toString method takes in no arguments and returns a string representing all the values in the Linked List.
 
 # Code Challenge 06
-
 ## Authors: Joseph Hangarter & Brandyn Vay
 
 ### Challenge
@@ -35,3 +41,20 @@ Implement a Singly Linked List Data Structure
 
 ### Solution
 ![Code-Challenge-6](./whiteboard-img/code-challenge-6.jpg)
+
+
+# CODE CHALLENGE 07
+## Authors: Joseph Hangarter & Brandyn Vay
+
+## Challenge Description
+Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
+
+Stretch goal: implement a method that finds the node at the middle of the Linked List.
+
+## Approach & Efficiency
+-Utilized while loop to get a total count of the linked list
+-another while loop to subtract parameter from count
+-return node value
+
+## Solution
+![Code-Challenge-7](./whiteboard-img/code-challenge-7.jpg)

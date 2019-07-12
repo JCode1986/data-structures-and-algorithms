@@ -62,23 +62,40 @@ class linkedList {
     }
 
     insertBefore(value, newVal){
-      //
+      //add a new node with the given newValue immediately before the first value node
     }
 
     insertAfter(value, newVal){
-      //
+      //add a new node with the given newValue immediately after the first value node
     }
 
+    kthFromEnd(k) { 
+      let count =  0;
+      let current = this.head;
+  
+      while(current.next) {
+        current = current.next
+        count++;
+      } 
+      let iterate = count - k;
+      current = this.head;
+      while(iterate > 0) {
+        current = current.next; 
+        iterate--;
+      }
+      return current.value
+  } 
 };
 
 
 let list = new linkedList();
-console.log(list)
+console.log(list);
 list.insert('foo');
 list.insert('bar');
 list.insert('hello');
-list.append(`what's up`)
+list.append(`what's up`);
 console.log(list);
 console.log(list.includes('foo'));
 console.log(list.includes('fooooo'));
-console.log(list.toString())
+console.log(list.toString());
+console.log(list.kthFromEnd(2));
