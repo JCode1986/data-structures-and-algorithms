@@ -43,7 +43,7 @@ Implement a Singly Linked List Data Structure
 ![Code-Challenge-6](./whiteboard-img/code-challenge-6.jpg)
 
 
-# CODE CHALLENGE 07
+# Code Challenge 07
 ## Authors: Joseph Hangarter & Brandyn Vay
 
 ## Challenge Description
