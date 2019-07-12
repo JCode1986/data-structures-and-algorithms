@@ -19,4 +19,9 @@ describe('Linked Lists', () => {
     expect(node).toBe(true);
   })
 
+  it('append (value) should append node to end of linked list', () => {
+    let node = new Node('bar')
+    
+  })
+
 });
