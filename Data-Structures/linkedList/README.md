@@ -52,9 +52,9 @@ Write a method for the Linked List class which takes a number, k, as a parameter
 Stretch goal: implement a method that finds the node at the middle of the Linked List.
 
 ## Approach & Efficiency
--Utilized while loop to get a total count of the linked list
--another while loop to subtract parameter from count
--return node value
+* Utilized while loop to get a total count of the linked list
+* Another while loop to subtract parameter from count
+* Return node value
 
 ## Solution
 ![Code-Challenge-7](./whiteboard-img/code-challenge-7.jpg)
