@@ -5,6 +5,7 @@
 2. [Code Challenge 07](#Code-Challenge-07)
   * [link list kth](https://github.com/JCode1986/data-structures-and-algorithms/blob/ll_kth_from_end/Data-Structures/linkedList/linked-list.js)
 3. [Code Challenge 08](#Code-Challenge_08)
+  * [link list merge]()
 
 # Singly Linked List
 Implement a Singly Linked List Data Structure
@@ -58,3 +59,19 @@ Stretch goal: implement a method that finds the node at the middle of the Linked
 
 ## Solution
 ![Code-Challenge-7](./whiteboard-img/code-challenge-7.jpg)
+
+
+# CODE CHALLENGE 08
+## Authors: Joseph Hangarter & Austin Wood
+
+## Challenge Description
+Write a function called mergeLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. Try and keep additional space down to O(1).
+
+## Approach & Efficiency
+-Keeping track of the 2 heads of the linkedlists and their nexts.
+-while loop to get a counter if one link list os greater than the other
+-while loop to keep on traversing if there is no null
+-if one is greater, then after zipping, continue with what's left
+
+## Solution
+![Code-Challenge-8](./whiteboard-img/code-challenge-8.jpg)
