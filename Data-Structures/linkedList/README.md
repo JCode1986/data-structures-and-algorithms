@@ -3,7 +3,7 @@
 1. [Code Challenge 06](#Code-Challenge-06)
   * [link list insertions](https://github.com/JCode1986/data-structures-and-algorithms/blob/linked_list/Data-Structures/linkedList/linked-list.js)
 2. [Code Challenge 07](#Code-Challenge-07)
-  * [link list kth]()
+  * [link list kth](https://github.com/JCode1986/data-structures-and-algorithms/blob/ll_kth_from_end/Data-Structures/linkedList/linked-list.js)
 3. [Code Challenge 08](#Code-Challenge_08)
 
 # Singly Linked List

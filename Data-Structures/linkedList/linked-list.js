@@ -72,19 +72,22 @@ class linkedList {
     kthFromEnd(k) { 
       let count =  0;
       let current = this.head;
-  
-      while(current.next) {
-        current = current.next
-        count++;
-      } 
-      let iterate = count - k;
-      current = this.head;
-      while(iterate > 0) {
-        current = current.next; 
-        iterate--;
-      }
-      return current.value
-  } 
+
+    while(current.next !== null) {
+      current = current.next
+      count++;
+    } 
+    if (k > count) {
+      return null;
+    }
+    let target = count - k;
+    current = this.head;
+    while(target > 0) {
+      current = current.next;
+      target--;
+    }
+    return current.value
+  }
 };
 
 
@@ -93,9 +96,11 @@ console.log(list);
 list.insert('foo');
 list.insert('bar');
 list.insert('hello');
+list.insert('yo');
+list.insert('hi');
 list.append(`what's up`);
 console.log(list);
 console.log(list.includes('foo'));
 console.log(list.includes('fooooo'));
 console.log(list.toString());
-console.log(list.kthFromEnd(2));
+console.log(list.kthFromEnd(3));
