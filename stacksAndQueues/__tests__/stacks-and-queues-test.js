@@ -10,9 +10,10 @@ describe('Stacks and Queues', () => {
 
   });
 
-  it('Can successfully push onto a stack', () => {
-    let expected = stack.push('hi');
-    expect(expected).toBe('hi')
+  it('Can successfully push a node onto a stack', () => {
+    let newNode = node.Node(); 
+    let expected = stack.push(newNode('hello'));
+    expect(expected).toBe('hello')
   });
 
   it('Can successfully push multiple values onto a stack', () => {
