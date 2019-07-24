@@ -5,7 +5,7 @@
 2. [Code Challenge 07](#Code-Challenge-07)
   * [link list kth](https://github.com/JCode1986/data-structures-and-algorithms/blob/ll_kth_from_end/Data-Structures/linkedList/linked-list.js)
 3. [Code Challenge 08](#Code-Challenge-08)
-  * [link list merge](https://github.com/JCode1986/data-structures-and-algorithms/blob/master/Data-Structures/linkedList/README.md#Code-Challenge-08)
+  * [link list merge](https://github.com/JCode1986/data-structures-and-algorithms/blob/master/Data-Structures/llMerge/ll-merge.js)
 
 # Singly Linked List
 Implement a Singly Linked List Data Structure
