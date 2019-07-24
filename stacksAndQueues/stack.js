@@ -48,7 +48,7 @@ class Stack {
    * @memberof Stack
    */
   peek() {
-    return this.top.value;
+    return this.top;
   }
 }
 
@@ -58,13 +58,13 @@ let stack = new Stack();
 
 module.exports = Stack;
 
-stack.push(1)
-stack.push(2)
-stack.push(3)
-stack.push(4)
-console.log(stack.pop())
-console.log(stack.peek())
-console.log(stack);
+// stack.push(1)
+// stack.push(2)
+// stack.push(3)
+// stack.push(4)
+// console.log(stack.pop())
+// console.log(stack.peek())
+// console.log(stack);
 // console.log(stack.pop());
 // console.log(stack.peek())
 // console.log(util.inspect(stack, false, null, true));

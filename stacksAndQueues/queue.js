@@ -20,11 +20,9 @@ class Queue {
    * @memberof Queue
    */
   enqueue(...values) {
-  //  this.next = this.rear
-  //  this.rear = new Node(value);
-  if(!values[0]) return 'needs at least one argument';
-  let total = [...values];
-  total.forEach( value => {
+  if(values[0] === undefined) return 'needs at least one argument';
+  let entry = [...values];
+  entry.forEach( value => {
     let node = new Node;
     node.value = value;
     if(!this.front) {
@@ -45,11 +43,12 @@ class Queue {
    * @memberof Queue
    */
   dequeue() {
-    if(!this.front) return null;
     let node = this.front;
-    this.front = node.next || null;
-    if (this.front === null) this.rear = null; 
-    return node.value || null;
+    this.front = node.next
+    if (this.front === null) {
+      this.rear = null; 
+      return node.value
+    }
   }
 
   /**
@@ -59,7 +58,7 @@ class Queue {
    * @memberof Queue
    */
     peek() {
-    return this.front;
+    return this.front.value;
   }
 }
 
@@ -67,8 +66,10 @@ module.exports = Queue;
 
 let queue = new Queue();
 
-queue.enqueue(1);
-queue.enqueue(2);
-queue.enqueue(3);
-queue.enqueue(4);
-console.log(queue)
+// queue.enqueue(1);
+// queue.enqueue(2);
+// queue.enqueue(3);
+// queue.enqueue(4);
+// queue.dequeue()
+// console.log(queue.peek())
+// console.log(queue);
