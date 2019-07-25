@@ -25,12 +25,12 @@ Implement a Stack and a Queue Data Structure
 ## API
 * `class Node` has a next and a value
 
-* `class Stack` has a top and a stack (array)
+* `class Stack` has a top
   * `push()` takes any value as an argument and adds a new value to the top of the stack 
   * `pop()` removes the node from the top of the stack and returns the value
   * `peek()` returns the value located on top of the stack
 
-* `class Queue` has a rear and a queue (array)
+* `class Queue` has a top and rear
   * `enqueue()` adds a new value to the back of the queue 
   * `dequeue()` removes the value from the front of the queue and returns the value
   * `peek()` returns the value located in the front of the queue without removing it from the queue
