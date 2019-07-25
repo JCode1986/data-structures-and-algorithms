@@ -1,15 +1,24 @@
 'use strict';
 
-const stacksAndQueues = require('../stacks-and-queues');
+const Node = require('../node');
+const Stack = require('../stack');
+const Queue = require('../queue');
 
-const node = new stacksAndQueues.Node();
-const stack = new stacksAndQueues.Stack();
-const queue = new stacksAndQueues.Queue();
+
+const node = new Node();
+const stack = new Stack();
+const queue = new Queue();
 
 describe('Stacks and Queues', () => {
 
   });
 
+  it('return message if there is nothing to pop', () => {
+    let newStack = new Stack();
+    let expected = stack.pop();
+    expect(expected).toBe('underflow');
+  });
+  
   it('Can successfully push onto a stack', () => {
     let expected = stack.push('hi');
     expect(expected).toBe('hi')
@@ -25,6 +34,7 @@ describe('Stacks and Queues', () => {
     let expected = stack.pop();
     expect(expected).toBe('world');
   });
+  
 
   it('Can successfully empty a stack after multiple pops', () => {
 
@@ -37,7 +47,7 @@ describe('Stacks and Queues', () => {
   });
 
   it('Can successfully instantiate an empty stack', () => {
-    let expected = new stacksAndQueues.Stack();
+    let expected = new Stack();
     expect(expected).toEqual({"stack": [], "top": null});
   });
 
@@ -67,7 +77,6 @@ describe('Stacks and Queues', () => {
   });
 
   it('Can successfully instantiate an empty queue', () => {
-    let expected = new stacksAndQueues.Queue();
+    let expected = new Queue();
     expect(expected).toEqual({ queue: [], rear: null })
   });
-
