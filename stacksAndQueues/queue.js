@@ -1,7 +1,5 @@
 'use strict';
 
-const Node = require('./node.js');
-
 /**
  * node queue
  * with array and rear
@@ -9,32 +7,20 @@ const Node = require('./node.js');
  */
 class Queue {
   constructor(){
+    this.queue = [];
     this.rear = null;
-    this.front = null;
   }
 
   /**
-   * adds a new node
+   * adds a new value
    * to the back of the queue 
    * @param {*} value
    * @memberof Queue
    */
-  enqueue(...values) {
-  if(values[0] === undefined) return 'needs at least one argument';
-  let entry = [...values];
-  entry.forEach( value => {
-    let node = new Node;
-    node.value = value;
-    if(!this.front) {
-      this.front = node;
-      this.rear = node;
-    } else {
-      this.rear.next = node;
-      this.rear = node;
-    }
-  });
+  enqueue(value) {
+    this.queue.push(value);
+    return this.rear = value;
   }
-  
 
   /**
    * removes the value from the front of the queue
@@ -43,12 +29,7 @@ class Queue {
    * @memberof Queue
    */
   dequeue() {
-    let node = this.front;
-    this.front = node.next
-    if (this.front === null) {
-      this.rear = null; 
-      return node.value
-    }
+    return this.queue.shift();
   }
 
   /**
@@ -58,18 +39,8 @@ class Queue {
    * @memberof Queue
    */
     peek() {
-    return this.front.value;
+    return this.queue[0];
   }
 }
 
-module.exports = Queue;
-
-let queue = new Queue();
-
-// queue.enqueue(1);
-// queue.enqueue(2);
-// queue.enqueue(3);
-// queue.enqueue(4);
-// queue.dequeue()
-// console.log(queue.peek())
-// console.log(queue);
+module.exports = Queue; 

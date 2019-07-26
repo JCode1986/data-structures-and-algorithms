@@ -1,15 +1,15 @@
 'use strict';
 
-const Node = require('./node.js');
-
+const Node = require('./node');
 /**
  * node stack
- * with a top and rear
+ * with a top and stack (array)
  * @class Stack
  */
 class Stack {
   constructor(){
     this.top = null;
+    this.stack = [];
   }
 
   /**
@@ -20,25 +20,23 @@ class Stack {
    * @memberof Stack
    */
   push(value) {
-    let node = new Node(value)
-    this.next = this.top;
-    this.top = node;
+    this.stack.push(value);
+    return this.top = (value);
   }
 
   /**
    * removes the node from the top of the stack,
-   * returns the node's value
+   * returns the value
    * @returns
    * @memberof Stack
    */
   pop() {
-    if (this.top === null) {
-      return "nothing to pop";
+    if (!this.stack[0]) {
+      return "underflow";
     }
-    let temp = this.top;
-    this.top = this.next;
-    temp.next = null;
-    return temp.value;
+    let value = this.stack.pop();
+    this.top = this.stack[this.stack.length-1];
+    return value;
   }
 
   /**
@@ -52,19 +50,14 @@ class Stack {
   }
 }
 
+let stack = new Stack()
+stack.push('yo')
+stack.push('1')
+stack.push('2')
+stack.push('3')
+stack.push('4')
 
-let stack = new Stack();
+console.log(stack.pop())
+console.log(stack.pop())
 
-
-module.exports = Stack;
-
-// stack.push(1)
-// stack.push(2)
-// stack.push(3)
-// stack.push(4)
-// console.log(stack.pop())
-// console.log(stack.peek())
-// console.log(stack);
-// console.log(stack.pop());
-// console.log(stack.peek())
-// console.log(util.inspect(stack, false, null, true));
+module.exports = Stack; 

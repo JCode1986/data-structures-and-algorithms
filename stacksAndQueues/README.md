@@ -15,12 +15,7 @@ Implement a Stack and a Queue Data Structure
 * Define a method called peek that does not take an argument and returns the value of the node located in the front of the queue, without removing it from the queue.
 
 ## Approach & Efficiency
-* `push()` utilized push method to push value to the end of array, and assigned to `this.top` from `class Stack`
-* `pop()` utilized pop method to remove and return the value of the end of array, and removed from `this.top`
-* `peek()` returned `this.top` to see the end value of array
-* `enqueue()` utilized push method to push value to the end of array, and assigned to `this.rear` from `class Queue`
-* `dequeue()` utilized shift method to remove and return the value of the front of array, and removed from `this.rear`
-* `peek()` returned `this.rear` to see first value of array
+The Stack class contains a reference to the top node and has a stack as an array type. The Queue class contains a reference to the rear node and has a queue as an array type.
 
 ## API
 * `class Node` has a next and a value

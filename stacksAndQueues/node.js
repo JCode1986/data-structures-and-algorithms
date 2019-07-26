@@ -7,9 +7,9 @@
  */
 class Node {
   constructor(value) {
-    this.next;
+    this.next = null;
     this.value = value;
   }
 }
 
-module.exports = Node;
+module.exports = Node; 
