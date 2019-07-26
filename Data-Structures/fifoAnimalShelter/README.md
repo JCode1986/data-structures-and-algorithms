@@ -8,7 +8,7 @@ First-in, First out Animal Shelter
   * dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Enqueue and Dequeue functions were utilized from Queue challenge. `arg.value` was utilized to obtain the species of the pet.
 
 ## Solution
 ![IMAGE](./image/whiteboard.jpg)
