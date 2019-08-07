@@ -9,7 +9,14 @@ Implement a Tree
   * Define a method named contains that accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
 
 ## Approach & Efficiency
-
+* Utilized recursions and conditions for depth traversals, for adding a value, and to check if the value is present.
 
 ## API
-<!-- Description of each method publicly available in each of your trees -->
+* BinaryTree class
+  * `preOrder`
+  * `postOrder`
+  * `inOrder`
+  * `levelOrder`
+* BinarySearchTree class
+  * `add(value)`
+  * `contain(value)`

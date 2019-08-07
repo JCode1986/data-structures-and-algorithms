@@ -1,6 +1,6 @@
 'use strict';
 
-const node = require('./node');
+require('./node');
 
 class BinaryTree {
   constructor (root = null) {
@@ -60,14 +60,52 @@ class BinarySearchTree {
     this.root = root;
   }
   
-  add() {
-
+  add(value) {
+    let node = this.root
+    if(!node) {
+      this.root = new Node(value);
+      return;
+    } else {
+      let searchTree = function(value) {
+        if(value < node.value) {
+          if(!node.left) {
+            node.left = new Node(value);
+            return;
+          } else if(node.left !== null) {
+            return searchTree(node.left);
+          } else if(data > node.value) {
+            if(!node.right) {
+              node.right = new Node(value);
+              return;
+            } else if(node.right !== null) {
+              return searchTree(node.right);
+            }
+          } else {
+            return null;
+          }
+        };
+        return searchTree(node);
+      }
+    }
   }
 
-  contains() {
-
+  contains(value) {
+    let current = this.root;
+    while (current) {
+      if(value === current.value) {
+        return true;
+      }
+      if(value < current.value) {
+        current = current.left;
+      } else {
+        current = current.right;
+      }
+    }
+    return false;
   }
   
 };
 
-module.exports = { BinaryTree, BinarySearchTree };
+let tree = new BinaryTree();
+
+module.exports = { BinaryTree, BinarySearchTree, };
