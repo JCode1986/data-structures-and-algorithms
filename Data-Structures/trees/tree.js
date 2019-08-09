@@ -40,7 +40,7 @@ class BinaryTree {
     return results;
   }
 
-  leveOrder() {
+  breadth_first() {
     let results = [];
     let nodeQueue = [];
     nodeQueue.push(this.root);
