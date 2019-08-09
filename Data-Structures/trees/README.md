@@ -20,3 +20,6 @@ Implement a Tree
 * BinarySearchTree class
   * `add(value)`
   * `contain(value)`
+
+## Solution for breadth_first()
+![whiteboard](./image/whiteboard.jpg)
