@@ -26,6 +26,6 @@ Implement a Tree
 ## Solution for breadth_first()
 ![whiteboard](./image/whiteboard.jpg)
 
-## Authors: Joseph Hangarter & Pratiibh Bassi
+## Authors: Joseph Hangarter, Pratiibh Bassi, & Elizabeth Kavalski
 ## Solution for find_maximum_value()
 ![whiteboard](./image/Challenge-18.jpg)
