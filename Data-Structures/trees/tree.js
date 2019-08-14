@@ -1,10 +1,51 @@
 'use strict';
 
-require('./node');
+let Node = require('./node');
 
 class BinaryTree {
   constructor (root = null) {
     this.root = root;
+  }
+
+  insert(value) {
+    let newNode = new Node(value);
+    if (this.root === null) {
+      this.root = newNode;
+      return this;
+    }
+    var current = this.root;
+    while(true){
+      if(value === current.value){
+        return undefined;
+      }
+      if(value < current.value){
+        if(current.left === null){
+          current.left = newNode;
+          return this;
+        }
+        current = current.left;
+      } else {
+        if(current.right === null){
+          current.right = newNode;
+          return this;
+        }
+        current = current.right;
+      }
+      if(value === current.value) return undefined;
+      if(value > current.value){
+        if(current.right === null){
+          current.right = newNode;
+          return this;
+        }
+        current = current.right;
+      } else {
+        if(current.left === null){
+          current.left = newNode;
+          return this;
+        }
+        current = current.left;
+      }
+    }
   }
 
   preOrder() {
@@ -15,7 +56,7 @@ class BinaryTree {
       if(node.right) { _walk(node.right); }
     }
     _walk(this.root);
-    return results;
+    return results; 
   }
 
   inOrder() {
@@ -53,6 +94,25 @@ class BinaryTree {
     return results;
   }
 
+  find_maximum_value() {
+    let maxValue = 0;
+    if(this.root !== null) { 
+      return 'Tree does not exist';
+    };
+    let _walk = node => {
+      if(node.value > maxValue) {
+        maxValue = node.value;
+      }
+      if (node.left) {
+        _walk(node.left);
+      }
+      if(node.right) {
+        _walk(node.right);
+      }
+    }
+    _walk(this.root);
+    return maxValue;
+  }  
 };
 
 class BinarySearchTree {
@@ -107,5 +167,15 @@ class BinarySearchTree {
 };
 
 let tree = new BinaryTree();
+tree.insert(10);
+tree.insert(7);
+tree.insert(4);
+tree.insert(9);
+tree.insert(11);
+tree.insert(15);
+tree.find_maximum_value(tree)
+// console.log(tree)
+
+
 
 module.exports = { BinaryTree, BinarySearchTree, };

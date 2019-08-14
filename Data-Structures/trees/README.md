@@ -17,9 +17,15 @@ Implement a Tree
   * `postOrder`
   * `inOrder`
   * `levelOrder`
+  * `find_maximum_value`
 * BinarySearchTree class
   * `add(value)`
   * `contain(value)`
 
+## Authors: Joseph Hangarter & Pratiibh Bassi
 ## Solution for breadth_first()
 ![whiteboard](./image/whiteboard.jpg)
+
+## Authors: Joseph Hangarter & Pratiibh Bassi
+## Solution for find_maximum_value()
+![whiteboard](./image/Challenge-18.jpg)
