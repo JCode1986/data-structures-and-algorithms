@@ -10,3 +10,4 @@ describe('Multi-bracket validation', () => {
 
   });
 });
+
