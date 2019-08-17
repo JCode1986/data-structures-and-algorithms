@@ -2,19 +2,19 @@
 
 ## 301
 * Code Challenges
-    * [2d Arrays]()
-    * [All Methods]()
-    * [Chaining Methods]()
-    * [Filter]()
-    * [For Each](https://github.com/JCode1986/data-structures-and-algorithms/blob/master/code-challenges/challenge1/challenges-01.test.js)
-    * [Map]()
-    * [Objects: Kyes, Values, Entries]()
-    * [Reduce]()
-    * [Regex Part 2]()
-    * [Regex Part 1]()
-    * [Sort]()
-    * [Split, Join, Slice, Splice]()
-    * [String Manipulation]()
+    * [2d Arrays](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge12)
+    * [All Methods](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge14)
+    * [Chaining Methods](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge10)
+    * [Filter](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge8)
+    * [For Each](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge1)
+    * [Map](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge7)
+    * [Objects: Kyes, Values, Entries](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge6)
+    * [Reduce](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge9)
+    * [Regex Part 1](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge4)
+    * [Regex Part 2](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge11)
+    * [Sort](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge3)
+    * [Split, Join, Slice, Splice](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge5)
+    * [String Manipulation](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge2)
     * [Value vs. Reference]()
     
 # Challenge Summary
