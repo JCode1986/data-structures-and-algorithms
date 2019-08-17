@@ -9,7 +9,23 @@ Implement a Tree
   * Define a method named contains that accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
 
 ## Approach & Efficiency
-
+* Utilized recursions and conditions for depth traversals, for adding a value, and to check if the value is present.
 
 ## API
-<!-- Description of each method publicly available in each of your trees -->
+* BinaryTree class
+  * `preOrder`
+  * `postOrder`
+  * `inOrder`
+  * `levelOrder`
+  * `find_maximum_value`
+* BinarySearchTree class
+  * `add(value)`
+  * `contain(value)`
+
+## Authors: Joseph Hangarter & Pratiibh Bassi
+## Solution for breadth_first()
+![whiteboard](./image/whiteboard.jpg)
+
+## Authors: Joseph Hangarter, Pratiibh Bassi, & Elizabeth Kavalski
+## Solution for find_maximum_value()
+![whiteboard](./image/Challenge-18.jpg)
