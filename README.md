@@ -1,7 +1,7 @@
 # Data Structures and Algorithms
 
 ## 301
-* Code Challenges
+* ### Code Challenges
     * [2d Arrays](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge12)
     * [All Methods](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge14)
     * [Chaining Methods](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge10)
@@ -19,7 +19,7 @@
    
 
 ## 401
-* Challenges
+* ### Challenges
    * [Array Binary Search](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/challenges/arrayBinarySearch)
    * [Array Reverse](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/challenges/arrayReverse)
    * [Array Shift](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/challenges/arrayShift)
