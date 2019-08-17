@@ -1,17 +1,13 @@
-'use strict';
+'use strict'
 
-const brackets = require('../multi-bracket-validation');
+const Stack = require('../../stacksAndQueues/stack');
+const Bracket = require('../multi-bracket-validation');
+
+console.log(multiBracketValidation());
 
 describe('Multi-bracket validation', () => {
-  it('should only take a string as an argument', () => {
-    let testOne = brackets.multiBracketValidation(1);
-    expect(testOne).toBe('please enter a string bracket type');
-    let testTwo = brackets.multiBracketValidation('[], {}, ()');
-    expect(testTwo).toBe('[], {}, ()');
-  })
+  it('return false if there is nothing in stack', () => {
 
-  it('wired up', () => {
-    
-  })
-
+  });
 });
+
