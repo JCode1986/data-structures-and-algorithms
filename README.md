@@ -2,20 +2,20 @@
 
 ## 301
 * Code Challenges
-    * 2d Arrays
-    * All Methods
-    * Chaining Methods
-    * Filter
-    * For Each
-    * Map
-    * Objects: Kyes, Values, Entries
-    * Reduce
-    * Regex Part 2
-    * Regex Part 1
-    * Sort
-    * Split, Join, Slice, Splice
-    * String Manipulation
-    * Value vs. Reference
+    * [2d Arrays]()
+    * [All Methods]()
+    * [Chaining Methods]()
+    * [Filter]()
+    * [For Each](https://github.com/JCode1986/data-structures-and-algorithms/blob/master/code-challenges/challenge1/challenges-01.test.js)
+    * [Map]()
+    * [Objects: Kyes, Values, Entries]()
+    * [Reduce]()
+    * [Regex Part 2]()
+    * [Regex Part 1]()
+    * [Sort]()
+    * [Split, Join, Slice, Splice]()
+    * [String Manipulation]()
+    * [Value vs. Reference]()
     
 # Challenge Summary
 Write a function called reverseArray which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
