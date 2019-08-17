@@ -24,7 +24,7 @@
    * [Array Reverse](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/challenges/arrayReverse)
    * [Array Shift](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/challenges/arrayShift)
    
-* Data Structures
+* ### Data Structures
    * [FIFO Animal Shelter](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/Data-Structures/fifoAnimalShelter)
    * [FIFO Buzz Tree](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/Data-Structures/fizzBuzzTree)
    * [Linked List](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/Data-Structures/linkedList)
