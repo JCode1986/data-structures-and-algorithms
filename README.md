@@ -14,8 +14,9 @@
     * [Regex Part 2](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge11)
     * [Sort](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge3)
     * [Split, Join, Slice, Splice](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge5)
-    * [String Manipulation](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge2)
-    * [Value vs. Reference]()
+    * [String Manipulation]( https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge13)
+    * [Value vs. Reference](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge2)
+   
 
 ## 401
 * Data Structures
