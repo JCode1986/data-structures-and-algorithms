@@ -29,8 +29,8 @@
    * [FIFO Buzz Tree](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/Data-Structures/fizzBuzzTree)
    * [Linked List](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/Data-Structures/linkedList)
    * [Linked List Merge](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/Data-Structures/linkedList)
-   * [Multi-Bracket Validation()
-   * [Queue With Stacks]()
+   * [Multi-Bracket Validation]()
+   * [Queue with Stacks]()
    * [Stacks And Queues]()
    * [Trees]()
 
