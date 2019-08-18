@@ -4,6 +4,7 @@ const Stack = require('../stacksAndQueues/stack');
 
 module.exports = function multiBracketValidation(input) {
   let brackets = new Stack();
+  if(typeof input !== 'string') return 'enter a string';
   for(let i = 0; i < input.length; i++) {
     
     // If this is an opening bracket, add to the stack.
