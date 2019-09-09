@@ -2,7 +2,6 @@
 
 const insertionSort = require('../insertion-sort.js');
 
-
 describe('Tree', () => {
   it('works as expected', () => {
     let arrayOne = [9, 2, 7, 4, 3, 1, 5, 6, 8]
@@ -10,10 +9,10 @@ describe('Tree', () => {
   })
   it(`returns message if array is empty`, () => {
     let arrayTwo = []
-    expect(insertionSort(arrayTwo)).toBe('please enter numbers in the array');
+    expect(insertionSort(arrayTwo)).toBe('there is nothing in the array');
   })
   it(`returns message if element in array is not a number`, () => {
     let arrayThree = ['a', 'b', 'c'];
-    expect(insertionSort(arrayThree)).toBe('wooooo');
+    expect(insertionSort(arrayThree)).toBe('please enter a number');
   })
 });
