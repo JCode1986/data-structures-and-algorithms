@@ -33,6 +33,9 @@
    * [Queue with Stacks](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/Data-Structures/queueWithStacks)
    * [Stacks And Queues](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/Data-Structures/stacksAndQueues)
    * [Trees](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/Data-Structures/trees)
+   * [Insertion Sort]()
+   * [Quick Sort]()
+   * [Merge Sort]()
 
 
 
