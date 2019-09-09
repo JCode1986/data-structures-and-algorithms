@@ -1,10 +1,5 @@
 'use strict';
 
-import { link } from "fs";
-
-module.exports.Node;
-module.exports.linkedList;
-
 // Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
 
 // Within your LinkedList class, include a head property. Upon instantiation, an empty Linked List should be created.
@@ -16,7 +11,7 @@ class Node {
   }
 };
 
-class linkedList {
+class LinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
@@ -27,6 +22,7 @@ class linkedList {
     let newNode = new Node(value)
     newNode.next = this.head;
     this.head = newNode;
+    return this.head;
   };
 
   // takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list
@@ -153,8 +149,10 @@ class linkedList {
   } 
 };
 
+module.exports = LinkedList;
+module.exports = Node;
 
-let list = new linkedList();
+let list = new LinkedList();
 console.log(list);
 list.insert('foo');
 list.insert('bar');
