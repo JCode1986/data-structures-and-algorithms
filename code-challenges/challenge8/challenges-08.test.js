@@ -27,7 +27,7 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   return arr.filter(function(value){
-    return value === /[aeiouAEIOU]/;
+    return value.match(/[aeiouAEIOU]/);
   });
 };
 
@@ -41,9 +41,8 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  return arr.filter(function(value, index, array){
-    if(forbiddenValues === array[1]);
-      return true;
+  return arr.filter(function(value){
+    return !forbiddenValues.includes(value);
   })
 };
 
@@ -103,11 +102,15 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 ------------------------------------------------------------------------------------------------ */
 
 const getStatName = (arr, minBaseStat) => {
-  return arr.filter(function(value, index, array){
+  let filtered_array = arr.filter(function(value){
     if(minBaseStat < value.baseStat){
-      return value.name; 
+      return true; 
     }
-  })
+  });
+
+  return filtered_array.map(function(value) {
+    return value.stat.name;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -160,10 +163,8 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (arr) => {
-  return arr.filter(function(value, index, array){
-    if(value.children !== true){
-      return array;
-    }
+  return arr.filter(function(value){
+    return !value.hasOwnProperty('children');
   })
 };
 
@@ -282,7 +283,7 @@ xdescribe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return an array containing characters who do not have children', () => {
     expect(getCharactersWithoutChildren(characters)).toStrictEqual([ { name: 'Sansa', spouse: 'Tyrion', house: 'Stark' }, { name: 'Jon', spouse: null, house: 'Snow' } ]);
     expect(getCharactersWithoutChildren(characters).length).toStrictEqual(2);

@@ -1,3 +1,12 @@
+# Table of Contents
+
+1. [Code Challenge 06](#Code-Challenge-06)
+  * [link list insertions](https://github.com/JCode1986/data-structures-and-algorithms/blob/linked_list/Data-Structures/linkedList/linked-list.js)
+2. [Code Challenge 07](#Code-Challenge-07)
+  * [link list kth](https://github.com/JCode1986/data-structures-and-algorithms/blob/ll_kth_from_end/Data-Structures/linkedList/linked-list.js)
+3. [Code Challenge 08](#Code-Challenge-08)
+  * [link list merge](https://github.com/JCode1986/data-structures-and-algorithms/blob/master/Data-Structures/llMerge/ll-merge.js)
+
 # Singly Linked List
 Implement a Singly Linked List Data Structure
 
@@ -16,7 +25,53 @@ Implement a Singly Linked List Data Structure
 -for the toString method, is still complete at the moment
 
 ## API
-<!-- Description of each method publicly available to your Linked List -->
 -insert method takes any value as an argument and adds a new node with that value to the head of the list
 -includes method takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value 
 -toString method takes in no arguments and returns a string representing all the values in the Linked List.
+
+# Code Challenge 06
+## Authors: Joseph Hangarter & Brandyn Vay
+
+### Challenge
+* `.append(value)` which adds a new node with the given value to the end of the list
+* `.insertBefore(value, newVal)` which add a new node with the given newValue immediately before the first value node
+* `.insertAfter(value, newVal)` which add a new node with the given newValue immediately after the first value node
+
+### Approach & Efficiency
+* `.append(value)` - utilized `while()` to traverse to the tail of the linked list
+
+### Solution
+![Code-Challenge-6](./whiteboard-img/code-challenge-6.jpg)
+
+
+# CODE CHALLENGE 07
+## Authors: Joseph Hangarter & Brandyn Vay
+
+## Challenge Description
+Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
+
+Stretch goal: implement a method that finds the node at the middle of the Linked List.
+
+## Approach & Efficiency
+-Utilized while loop to get a total count of the linked list
+-another while loop to subtract parameter from count
+-return node value
+
+## Solution
+![Code-Challenge-7](./whiteboard-img/code-challenge-7.jpg)
+
+
+# CODE CHALLENGE 08
+## Authors: Joseph Hangarter & Austin Wood
+
+## Challenge Description
+Write a function called mergeLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. Try and keep additional space down to O(1).
+
+## Approach & Efficiency
+-Keeping track of the 2 heads of the linkedlists and their nexts.
+-while loop to get a counter if one link list os greater than the other
+-while loop to keep on traversing if there is no null
+-if one is greater, then after zipping, continue with what's left
+
+## Solution
+![Code-Challenge-8](./whiteboard-img/code-challenge-8.jpg)
