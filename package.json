@@ -1,18 +1,18 @@
 {
-  "name": "3-code-challenges",
+  "name": "code-challenges",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "## code-challenge",
+  "main": "linked-list.js",
   "scripts": {
-    "test": "jest --coverage --verbose",
-    "watch": "jest --watchall"
+    "start": "node index.js",
+    "lint": "eslint **/*.js",
+    "test": "jest --verbose --coverage",
+    "test-watch": "jest --watchAll --verbose --coverage",
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
   },
   "keywords": [],
   "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "jest": "^24.1.0"
-  },
+  "license": "ISC",
   "devDependencies": {
     "jest": "^24.8.0"
   }
