@@ -35,7 +35,3 @@
 - [Article 3](https://www.wikiwand.com/en/Merge_sort)
 - [Article 4](https://medium.com/karuna-sehgal/a-simplified-explanation-of-merge-sort-77089fe03bb2)
 - [Article 5](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/overview-of-merge-sort)
-
-### Bookmark
-
-- [Website]()
