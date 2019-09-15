@@ -44,7 +44,3 @@
 - [Article 3](https://www.khanacademy.org/computing/computer-science/algorithms/insertion-sort/a/insertion-sort)
 - [Article 4](https://www.toptal.com/developers/sorting-algorithms/insertion-sort)
 
-### Bookmark
-
-- [Website]()
-
