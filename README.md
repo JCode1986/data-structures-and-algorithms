@@ -36,6 +36,8 @@
    * [Insertion Sort](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/Data-Structures/insertionSort)
    * [Quick Sort](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/Data-Structures/quickSort)
    * [Merge Sort](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/Data-Structures/mergeSort)
+   * [Tree Intersection]()
+
 
 
 
