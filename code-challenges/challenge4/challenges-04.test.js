@@ -25,11 +25,13 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  let arr = [];
-  let regex = /A-Z\w+/g;
-  let test = str.match(regex);
-  let result = arr.push(test);
-  return result;
+  // let arr = [];
+  // let regex = /A-Z\w+/g;
+  // let test = str.match(regex);
+  // let result = arr.push(test);
+  // return result;
+  str.toLowerCase().replace(/\w{3,}/g, (match) =>
+  match.replace(/\w/, (m) => m.toUpperCase()))
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -118,7 +120,7 @@ Run your tests from the console: jest challenges-04.solution.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should return true if the input is a number', () => {
     expect(isNum(1234567890)).toBeTruthy();
     expect(isNum('12345')).toBeTruthy();
@@ -132,7 +134,7 @@ xdescribe('Testing challenge 1', () => {
   });
 });
 
-describe('Testing challenge 2', () => {
+xdescribe('Testing challenge 2', () => {
   test('It should only return words that begin with a capital letter', () => {
     const capitalResult = isCapitalized('We only want to Return the Words that begin With a capital Letter');
 

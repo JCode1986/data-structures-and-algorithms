@@ -146,6 +146,16 @@ const removeEvenValues = (arr) => {
     }
   }
   return arr;
+
+  // let result = [];
+  // for(let i = 0; i < arr.length; i++) {
+  //   if(arr[i] % 2) {
+  //     result.push(arr[i])
+  //   }
+  // }
+  //     return result;
+
+  // return arr.filter(evens => evens % 2)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -218,10 +228,22 @@ Similarly, extractVowels('The quick brown fox') returns ['Th qck brwn fx', 'eioo
 
 const extractVowels = (str) => {
   let result = []
-  let vowels = ['a', 'e', 'i', 'o', 'u']
-  str.split('').filter(function(el) {
-    return vowels.indexOf(el.toLowerCase()) == -1;
-  }).join('');
+  let firstString = '';
+  let secondString = '';
+  for(let i = 0; i < str.length; i++) {
+    if(str[i] == 'a' ||
+    str[i] == 'e' ||
+    str[i] == 'i' ||
+    str[i] == 'o' ||
+    str[i] == 'u') {
+      secondString += str[i];
+    } else {
+      firstString += str[i];
+    }
+  }
+  result.push(firstString);
+  result.push(secondString.split('').sort().join(''));
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -318,7 +340,7 @@ describe('Testing challenge 9', () => {
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should return the string without vowels', () => {
     expect(extractVowels('gregor')).toStrictEqual(['grgr', 'eo']);
     expect(extractVowels('gregor').length).toStrictEqual(2);
