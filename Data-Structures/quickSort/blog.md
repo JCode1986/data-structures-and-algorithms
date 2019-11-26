@@ -57,7 +57,3 @@
 
 - [Article 1](https://www.geeksforgeeks.org/quick-sort/)
 - [Article 2](https://khan4019.github.io/front-end-Interview-Questions/sort.html#quickSort)
-
-### Bookmark
-
-- [Website]()

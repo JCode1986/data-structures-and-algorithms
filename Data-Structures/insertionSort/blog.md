@@ -2,35 +2,22 @@
 
 * Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.
 
-* Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands.
+* The insertion sort algorithm iterates through an input array and removes one element per iteration, finds the place the element belongs in the array, and then places it there. This process grows a sorted list from left to right.
 
-### Learning Objectives
-What
-Will
-The
-Students
-Learn
-Today
-
-### Information Flow
-Main Point
-Supporting Points
-Another main point
-More details
-Go here
-Diagram
 ![Inserstion Sort Execution](./image/insertion-sort.png)
-Include your “Visual” here
 
 ### Algorithm
+* Start by pick the second element in array
+* Compare to previous element, and swap if necessary
+* Continue to next element, and if it is not in the correct order, iterate though the sorted portion (left side)
+* Repeat until array is sorted
 
 #### Properties
 * Stable
 * O(1) extra space
 * O(n2) comparisons and swaps
 * Adaptive: O(n) time when nearly sorted
-* Very low overhead
-////////Describe in detail how the algorithm works. Include small code snippets to possibly support the points
+* Worst case: reversed sort
 
 ### Pseudocode
 `InsertionSort(int[] arr)
@@ -57,6 +44,3 @@ Include your “Visual” here
 - [Article 3](https://www.khanacademy.org/computing/computer-science/algorithms/insertion-sort/a/insertion-sort)
 - [Article 4](https://www.toptal.com/developers/sorting-algorithms/insertion-sort)
 
-### Bookmark
-
-- [Website]()
