@@ -15,7 +15,8 @@ function repeatedWord(string) {
   }
   let keys = Object.keys(obj);
   for(let j = 0; j < keys.length; j++) {
-    let currentVal = obj[keys[j]]
+    let currentVal = obj[keys[j]] //or Object.values(obj)[j]
+    console.log(currentVal)
     if(currentVal) {
       if(currentVal > mostRepeatedValue) {
         mostRepeatedValue = currentVal;
