@@ -18,7 +18,7 @@
     * [Value vs. Reference](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge2)
    
 
-## 401
+## 401 JavaScript
 * ### Challenges
    * [Array Binary Search](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/challenges/arrayBinarySearch)
    * [Array Reverse](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/challenges/arrayReverse)
