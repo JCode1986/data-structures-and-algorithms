@@ -236,7 +236,7 @@ Run your tests from the console: jest challenge-12.test.js
 ------------------------------------------------------------------------------------------------ */
 
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should add the hourly totals array', () => {
     expect(grandTotal(cookieStores)).toStrictEqual([88, 153, 252, 286, 139, 161, 145, 232, 276, 207, 161, 169]);
   });
