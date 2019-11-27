@@ -18,10 +18,4 @@ describe('FIFO Animal Shelter', () => {
     let expected = animalShelter.fifoDequeue(animalTwo);
     expect(expected).toBe(null);
   });
-
-  xit('should dequeue if there are cats or dogs in shelter', () => {
-    let expected = animalShelter.fifoDequeue(animalOne);
-    expect(expected).toBe(animalOne);
-  });
-
 });

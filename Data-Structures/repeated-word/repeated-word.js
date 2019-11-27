@@ -13,14 +13,12 @@ function repeatedWord(string) {
     }
     else obj[word[i]]++;
   }
-  let keys = Object.keys(obj);
-  for(let j = 0; j < keys.length; j++) {
-    let currentVal = obj[keys[j]] //or Object.values(obj)[j]
-    console.log(currentVal)
+  for(let j = 0; j < Object.keys(obj).length; j++) {
+    let currentVal = Object.values(obj)[j]
     if(currentVal) {
       if(currentVal > mostRepeatedValue) {
         mostRepeatedValue = currentVal;
-        mostRepeatedKey = keys[j];
+        mostRepeatedKey = Object.keys(obj)[j]
       }
     }
   }

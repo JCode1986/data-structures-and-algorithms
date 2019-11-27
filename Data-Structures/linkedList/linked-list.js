@@ -109,43 +109,43 @@ class LinkedList {
 
   //merge link lists together, alternating nodes starting with param 1 (list1)
   mergeLists(list1, list2) {
-    let zippedList = new LinkedList();
-    let currentOne = list1.head;
-    let currentTwo = list2.head;
-    let countOne = 0;
-    let countTwo = 0;
-    while (currentOne !== null) {
-      countOne++;
-      currentOne = currentOne.next;
-    }
-    while (currentTwo !== null) {
-      countTwo++;
-      currentTwo = currentTwo.next;
-    }
-    currentOne = list1.head;
-    currentTwo = list2.head;
-    if (countOne >= countTwo) {
-      while (currentOne !== null) {
-        let nextOne = currentOne.next;
-        let nextTwo = currentTwo.next;
-        currentOne.next = currentTwo.value;
-        zippedList.append(currentOne);
-        currentTwo.next = nextOne;
-        zippedList.append(currentTwo);
-        currentOne = nextOne;
-        currentTwo = nextTwo;
-      }
-    } else{
-      while (currentOne !== null || currentTwo !== null){
-        let nextOne = currentOne.next;
-        let nextTwo = currentTwo.next;
-        currentTwo.next = currentOne.value;
-        zippedList.append(currentTwo);
-        currentOne.next = nextTwo;
-        zippedList.append(currentOne);
-        currentOne = nextOne;
-        currentTwo = nextTwo;
-      }}
+    // let zippedList = new LinkedList();
+    // let currentOne = list1.head;
+    // let currentTwo = list2.head;
+    // let countOne = 0;
+    // let countTwo = 0;
+    // while (currentOne !== null) {
+    //   countOne++;
+    //   currentOne = currentOne.next;
+    // }
+    // while (currentTwo !== null) {
+    //   countTwo++;
+    //   currentTwo = currentTwo.next;
+    // }
+    // currentOne = list1.head;
+    // currentTwo = list2.head;
+    // if (countOne >= countTwo) {
+    //   while (currentOne !== null) {
+    //     let nextOne = currentOne.next;
+    //     let nextTwo = currentTwo.next;
+    //     currentOne.next = currentTwo.value;
+    //     zippedList.append(currentOne);
+    //     currentTwo.next = nextOne;
+    //     zippedList.append(currentTwo);
+    //     currentOne = nextOne;
+    //     currentTwo = nextTwo;
+    //   }
+    // } else{
+    //   while (currentOne !== null || currentTwo !== null){
+    //     let nextOne = currentOne.next;
+    //     let nextTwo = currentTwo.next;
+    //     currentTwo.next = currentOne.value;
+    //     zippedList.append(currentTwo);
+    //     currentOne.next = nextTwo;
+    //     zippedList.append(currentOne);
+    //     currentOne = nextOne;
+    //     currentTwo = nextTwo;
+    //   }}
   } 
 };
 
