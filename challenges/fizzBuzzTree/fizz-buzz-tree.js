@@ -1,6 +1,6 @@
 'use strict';
 
-const node = require('../trees/node')
+const node = require('../../data-structures/trees/node')
 
 function fizzBuzzTree(tree) {       
   function walk(node) {  

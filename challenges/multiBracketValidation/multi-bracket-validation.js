@@ -1,6 +1,6 @@
 'use strict';
 
-const Stack = require('../stacksAndQueues/stack');
+const Stack = require('../../data-structures/stacksAndQueues/stack');
 
 module.exports = function multiBracketValidation(input) {
   let brackets = new Stack();
