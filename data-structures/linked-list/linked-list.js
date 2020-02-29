@@ -5,9 +5,9 @@
 // Within your LinkedList class, include a head property. Upon instantiation, an empty Linked List should be created.
 
 class Node {
-  constructor(value){
+  constructor(value, next){
     this.value = value;
-    this.next = null;
+    this.next = next;
   }
 };
 
@@ -19,10 +19,7 @@ class LinkedList {
   
   // takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance
   insert(value) {
-    let newNode = new Node(value)
-    newNode.next = this.head;
-    this.head = newNode;
-    return this.head;
+    this.head = new Node(value, this.head)
   };
 
   // takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list
@@ -69,7 +66,7 @@ class LinkedList {
           node.next = current.next; 
           current = node;
         }
-         current = current.next;
+        current = current.next;
       } 
     };
 
@@ -82,7 +79,7 @@ class LinkedList {
           node = current.next; 
           current = node;
         }
-         current = current.next;
+        current = current.next;
       } 
     };
 
@@ -151,19 +148,3 @@ class LinkedList {
 
 module.exports = LinkedList;
 module.exports = Node;
-
-let list = new LinkedList();
-console.log(list);
-list.insert('foo');
-list.insert('bar');
-list.insert('hello');
-list.insert('yo');
-list.insert('hi');
-list.append(`what's up`);
-console.log(list);
-console.log(list.includes('foo'));
-console.log(list.includes('fooooo'));
-console.log(list.toString());
-console.log(list.kthFromEnd(3));
-console.log(list.insertAfter('hello', 'world'));
-console.log(list.mergeLists())
