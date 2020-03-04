@@ -8,6 +8,7 @@
 class Queue {
   constructor(){
     this.queue = [];
+    this.front = null
     this.rear = null;
   }
 
@@ -18,8 +19,8 @@ class Queue {
    * @memberof Queue
    */
   enqueue(value) {
-    this.queue.push(value);
-    return this.rear = value;
+    this.queue.unshift(value);
+    return this.front = value;
   }
 
   /**
@@ -29,7 +30,9 @@ class Queue {
    * @memberof Queue
    */
   dequeue() {
-    return this.queue.shift();
+    let value = this.queue.shift();
+    this.front = this.queue[0]
+    return value
   }
 
   /**
