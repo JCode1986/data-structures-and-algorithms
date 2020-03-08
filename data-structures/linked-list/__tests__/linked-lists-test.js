@@ -1,35 +1,30 @@
 'use strict';
 
-jest.mock('fs');
-
-const Node = require('../linked-list');
 const LinkedList = require('../linked-list');
 
-/* 
-Can properly insert multiple nodes into the linked list
-Will return true when finding a value within the linked list that exists
-Will return false when searching for a value in the linked list that does not exist
-Can properly return a collection of all the values that exist in the linked list */
-
+const list = new LinkedList();
 
 describe('Linked Lists', () => {
   it('Can successfully instantiate an empty linked list', () => {
-    let expected = new LinkedList();
-    let actual = { value: undefined, next: undefined }
+    let actual = { head: null, tail: null };
+    expect(list).toEqual(actual);
+  })
+  it('Can properly insert into the linked list', () => {
+    let actual = list.insert('hi');
+    let expected = list.head;
     expect(expected).toEqual(actual);
   })
-  // it('Can properly insert into the linked list', () => {
-  //   let list = new LinkedList();
-  //   let actual = list.insert('hi')
-  //   let expected = list.head.value
-  //   console.log(actual)
-  //   expect(expected).toEqual(actual);
-  // })
-  // it('The head property will properly point to the first node in the linked list', () => {
-  //   let list = (new LinkedList());
-  //   let head = list.insert('first');
-  //   let next = list.insert('second');
-  //   console.log(head);
-  //   // expect(head.next)
+  it('The head property will properly point to the first node in the linked list', () => {
+    let next = list.insert('second');
+    let head = list.insert('first');
+    let expected = [list.head, list.head.next]
+    let actual = [head, next]
+    expect(expected).toEqual(actual);
+  })
+  // it('Returns boolean if node\'s value exists in the linked list', () => {
+  //   list.insert('hello world')
+  //   let expected = true
+  //   let actual = list.includes('hello world')
+  //   expect(expected).toBe(actual);    
   // })
 });
