@@ -9,9 +9,9 @@ class BinaryTree {
 
   insert(value) {
     let newNode = new Node(value);
-    if (this.root === null) {
+    if (!this.root) {
       this.root = newNode;
-      return this;
+      return this.root;
     }
     var current = this.root;
     while(true){
@@ -95,10 +95,10 @@ class BinaryTree {
   }
 
   find_maximum_value() {
-    let maxValue = 0;
-    if(this.root !== null) { 
-      return 'Tree does not exist';
+    if(!this.root) { 
+      return 'No root';
     };
+    let maxValue = this.root.value;
     let _walk = node => {
       if(node.value > maxValue) {
         maxValue = node.value;
@@ -124,19 +124,19 @@ class BinarySearchTree {
     let node = this.root
     if(!node) {
       this.root = new Node(value);
-      return;
+      return this.root;
     } else {
       let searchTree = function(value) {
         if(value < node.value) {
           if(!node.left) {
             node.left = new Node(value);
-            return;
+            return node.left;
           } else if(node.left !== null) {
             return searchTree(node.left);
           } else if(data > node.value) {
             if(!node.right) {
               node.right = new Node(value);
-              return;
+              return node.right;
             } else if(node.right !== null) {
               return searchTree(node.right);
             }

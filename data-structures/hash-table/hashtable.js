@@ -44,6 +44,8 @@ class HashMap {
           return keyInBucket[i][key]
         }
       }
+    } else {
+      return `${key} not in hashmap`
     }
   }
 }
