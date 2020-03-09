@@ -50,12 +50,17 @@ describe('Linked Lists', () => {
     expect(expected).toBe(actual); 
   })
 
-  // it('Return error message if node does not exist for insert before method', () => {
-  //   let actual = list.insertBefore('hi', 23)
-  //   let expected = []
-  //   console.log(list.toString())   
-  //   expect(expected).toBe(actual); 
-  // })
+  it('Return error message if node does not exist for insert before method', () => {
+    let actual = list.insertBefore('banana', 23)
+    let expected = 'Node with value: [banana] does not exist' 
+    expect(expected).toBe(actual); 
+  })
+
+  it('Return error message if node does not exist for insert after method', () => {
+    let actual = list.insertAfter('orange', 999)
+    let expected = 'Node with value: [orange] does not exist' 
+    expect(expected).toBe(actual); 
+  })
   
   it('Can insert before an existing specified node in the linked list', () => {
     let actual = list.insertBefore('hi', 23)

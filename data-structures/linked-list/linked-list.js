@@ -76,15 +76,18 @@ class LinkedList {
     let node = new Node(newVal);
     let current = this.head;
     let temp = null
-    while(current) {
-      if(current.value == value) {
-        temp.next = node
-        node.next = current
-      } 
-      temp = current
-      current = current.next;
-    }; 
-    return this.toString();
+    if(this.includes(value)) {
+      while(current) {
+        if(current.value == value) {
+          temp.next = node
+          node.next = current
+        } 
+        temp = current
+        current = current.next;
+      }; 
+      return this.toString();
+    };
+    return `Node with value: [${value}] does not exist`
   };
 
   //add a new node with the given newValue immediately after the first value node
@@ -92,15 +95,18 @@ class LinkedList {
     let node = new Node(newVal);
     let current = this.head;
     let temp = null
-    while(current){
-      if(current.value == value) {
-        temp = current.next
-        current.next = node
-        node.next = temp
+    if(this.includes(value)) {
+      while(current){
+        if(current.value == value) {
+          temp = current.next
+          current.next = node
+          node.next = temp
+        };
+        current = current.next;
       };
-      current = current.next;
-    };
-    return this.toString();
+      return this.toString();
+    }
+    return `Node with value: [${value}] does not exist`
   };
 
 
