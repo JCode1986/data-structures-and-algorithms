@@ -1,6 +1,5 @@
 'use strict';
 
-const Node = require('./node');
 /**
  * node stack
  * with a top and stack (array)
@@ -47,6 +46,11 @@ class Stack {
    */
   peek() {
     return this.top;
+  }
+
+  isEmpty() {
+    if(!this.stack.length) return true
+    return false
   }
 }
 

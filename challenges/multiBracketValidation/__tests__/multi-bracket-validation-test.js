@@ -1,24 +1,36 @@
 'use strict'
 
 const multiBracketValidation = require('../multi-bracket-validation');
+const Stack = require('../../../data-structures/stacksAndQueues/stack')
 
-console.log(multiBracketValidation('string'));
+const stack = new Stack()
+
 
 describe('Multi-bracket validation', () => {
-  it('fails as expected', () => {
-    let str = '[asdsad';
-    expect(multiBracketValidation(str)).toBeFalsy(); 
+  
+  it('can instantiate an empty stack', () => {
+    let expected = stack
+    let actual = {"stack": [], "top": null}
+    expect(expected).toEqual(actual); 
   });
 
-  it('works as expected', () => {
-    let str = '[asdsad]';
-    expect(multiBracketValidation(str)).toBeTruthy(); 
-  })
+  it('returns message if argument is not a string', () => {
+    let expected = "enter a string"
+    let actual = multiBracketValidation(123)
+    expect(expected).toEqual(actual);  
+  });
 
-  it('type checks argument', () => {
-    let num = 456;
-    expect(multiBracketValidation(num)).toEqual('enter a string'); 
-  })
+  it('works as exptected; brackets have matches', () => {
+    let expected = true
+    let actual = multiBracketValidation('[123]{}()') 
+    expect(expected).toEqual(actual);  
+  });
+
+  it('brackets does not have matches', () => {  
+    let expected = false
+    let actual = multiBracketValidation('[123]{}()((((((((') 
+    expect(expected).toEqual(actual);  
+  });
 
 });
 
