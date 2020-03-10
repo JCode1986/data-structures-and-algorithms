@@ -1,24 +1,40 @@
 'use strict';
 
-const node = require('../../data-structures/trees/node')
+const Tree = require('../../data-structures/trees/tree')
 
-function fizzBuzzTree(tree) {       
-  function walk(node) {  
-    if(!node.value === typeof Number) return node.value;       
-    if(node.value % 5 === 0 && node.value % 3 === 0) {
-      node.value = 'fizbuzz';
-    } else if (node.value % 5 === 0) {
-      node.value = 'buzz';
-    } else if (node.value % 3 === 0) {
-      node.value = 'fizz';
-    } else {
-      return node.value;
-    }
-    if(node.left) walk(node.left);
-    if(node.right) walk(node.right);
+function fizzBuzzTree (tree) {
+  let newTree = new Tree.BinaryTree()
+  console.log('asdsadas', newTree)
+  let node = tree.root
+  if(!node) { 
+    return 'Tree has no root value'  
   }
-  traverse(tree.root)
-  return tree;
-};
+
+  //helper function
+  function _calculate (value) {
+    if(value % 15 === 0) return 'FizzBuzz';
+    else if(value % 3 === 0) return 'Fizz';
+    else if(value % 5 === 0) return 'Buzz';
+    else return value
+  }
+
+  //helper function
+  function _walk (new_node, old_node) {    
+    new_node.value = _calculate(old_node.value);
+    if(old_node.left) {
+      new_node.left = new Node()
+      _walk(new_node.left, old_node.left)
+    }
+    if(old_node.right) {
+      new_node.right = new Node()
+      _walk(new_node.right, old_node.right)
+    }
+  }
+  _walk(newTree.root, tree.root)
+  return newTree;
+}
 
 module.exports = fizzBuzzTree;
+
+
+
