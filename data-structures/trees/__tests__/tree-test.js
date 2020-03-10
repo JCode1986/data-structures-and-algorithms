@@ -74,6 +74,7 @@ describe('Binary Tree and Binary Search Tree', () => {
     expect(expected).toEqual(actual); 
   });
 
+  
                       //BINARY SEARCH TREE
 
   it('Can successfully instantiate an empty binary search tree', () => {
