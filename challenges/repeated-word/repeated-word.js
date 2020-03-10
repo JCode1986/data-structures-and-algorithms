@@ -3,26 +3,24 @@
 function repeatedWord(string) {
   if(!string) return 'please enter something as an argument'
   let obj = {};
-  let word = string.split(' ');
-  let mostRepeatedKey = '';
-  let mostRepeatedValue = 0;
+  let wordArray = string.split(' ');
+  let mostRepeatedWord = '';
+  let wordCount = 0;
 
-  for(let i = 0; i < word.length; i++) {
-    if(!obj[word[i]]) {
-      obj[word[i]] = 1;
-    }
-    else obj[word[i]]++;
+  for(let word of wordArray) {
+    !obj[word] ? obj[word] = 1 : obj[word]++;
   }
-  for(let j = 0; j < Object.keys(obj).length; j++) {
-    let currentVal = Object.values(obj)[j]
+  
+  for(let key in obj) {
+    let currentVal = obj[key]
     if(currentVal) {
-      if(currentVal > mostRepeatedValue) {
-        mostRepeatedValue = currentVal;
-        mostRepeatedKey = Object.keys(obj)[j]
+      if(currentVal > wordCount) {
+        wordCount = currentVal;
+        mostRepeatedWord = key
       }
     }
   }
-  return mostRepeatedKey;
+  return mostRepeatedWord;
 }
 
 module.exports = repeatedWord; 
