@@ -1,5 +1,7 @@
 # Data Structures and Algorithms
 
+   * run `npm test` to run all the files, or run a specific file by traversing through folders, and running `npm test <testname.js>`
+
 ## 301
 * ### Code Challenges
     * [2d Arrays](https://github.com/JCode1986/data-structures-and-algorithms/tree/master/code-challenges/challenge12)
