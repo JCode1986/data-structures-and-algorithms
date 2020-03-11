@@ -58,9 +58,11 @@ describe('Stacks and Queues', () => {
     expect(expected).toBe('peek this');
   });
 
-  it('Can successfully instantiate an empty stack', () => {
-    let expected = new Stack();
-    expect(expected).toEqual({"stack": [], "top": null});
+  it('Returns a boolean if stack is empty', () => {
+    let stack2 = new Stack()
+    let expected = [ false, true ]
+    let actual = [ stack.isEmpty(), stack2.isEmpty() ]
+    expect(expected).toStrictEqual(actual);
   });
 
 
@@ -83,7 +85,14 @@ describe('Stacks and Queues', () => {
     expect(expected).toBe('red');
   });
 
-  it('Can successfully dequeue out of a queue the expected value', () => {
+  it('Can successfully returns a message if there is nothing to dequeue', () => {
+    let queue2 = new Queue()
+    let expected = 'Nothing to dequeue'
+    let actual = queue2.dequeue()
+    expect(expected).toBe(actual);
+  });
+
+  it('Can successfully dequeue out of a queue', () => {
     queue.enqueue('blue');
     let expected = queue.dequeue();
     expect(expected).toBe('blue');
@@ -92,13 +101,16 @@ describe('Stacks and Queues', () => {
   it('Can successfully peek into a queue, seeing the expected value', () => {
     queue.enqueue('car');
     let expected = queue.peek();
-    expect(expected).toBe('car');
+    let actual = queue.front
+    expect(expected).toBe(actual);
   });
 
   it('Can successfully empty a queue after multiple dequeues', () => {
     while (queue.queue.length !== 0) {
       queue.dequeue()
     }
-    console.log(queue)
+    let expected = 'Nothing to peek'
+    let actual = queue.peek()
+    expect(expected).toBe(actual)
   });
 

@@ -30,6 +30,7 @@ class Queue {
    * @memberof Queue
    */
   dequeue() {
+    if(!this.front) return 'Nothing to dequeue'
     let value = this.queue.shift();
     this.front = this.queue[0]
     return value
@@ -42,7 +43,8 @@ class Queue {
    * @memberof Queue
    */
     peek() {
-    return this.queue[0];
+    if(this.front) return this.front
+    return 'Nothing to peek'
   }
 }
 
