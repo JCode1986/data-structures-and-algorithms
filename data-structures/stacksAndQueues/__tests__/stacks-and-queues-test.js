@@ -112,5 +112,6 @@ describe('Stacks and Queues', () => {
     let expected = 'Nothing to peek'
     let actual = queue.peek()
     expect(expected).toBe(actual)
+    
   });
 

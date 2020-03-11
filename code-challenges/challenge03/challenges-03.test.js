@@ -210,17 +210,23 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
 
 const sortSchedule = (arr) => {
+  const sorter = {
+    "monday": 1,
+    "tuesday": 2,
+    "wednesday": 3,
+    "thursday": 4,
+    "friday": 5,
+  }
   arr.sort((a, b) => {
-    let totalTime = 0
-    let time1 = parseInt(a.start, 10);
-    let time2 = parseInt(b.start, 10);
-    if (time1 > time2) {
-      if(time1 = time2) {
-        totalTime = time2 - time1
+    let start1 = ~~a.start
+    let start2 = ~~b.start
+    let end1 = ~~a.end
+    let end2 = ~~b.end
+    if (a.dayOfWeek === b.dayOfWeek && start1 == start2) {
+      if(Math.abs(start1 - end1) < Math.abs(start2 - end2)) {
+
       }
     } 
-    return 1;
-    if (time1 < time2) return -1;
   })
   return arr;
 };

@@ -154,8 +154,23 @@ For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ..
 ------------------------------------------------------------------------------------------------ */
 
 const houseSize = (arr) => {
-  const sizes = [];
-  return sizes;
+  return arr.map((array) =>  {
+    let sizes = []
+    let obj = {}
+    let count = 0;  
+    if(array.name) count ++;
+    if(array.spouse)count ++;
+    if(array.children.length) {
+      for(let child in array.children) {
+        count++
+      }
+    }
+    obj['house'] = array.house
+    obj['members'] = count
+    console.log(obj)
+    sizes.unshift(obj)
+    return sizes;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------

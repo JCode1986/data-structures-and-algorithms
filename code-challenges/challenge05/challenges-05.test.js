@@ -146,16 +146,6 @@ const removeEvenValues = (arr) => {
     }
   }
   return arr;
-
-  // let result = [];
-  // for(let i = 0; i < arr.length; i++) {
-  //   if(arr[i] % 2) {
-  //     result.push(arr[i])
-  //   }
-  // }
-  //     return result;
-
-  // return arr.filter(evens => evens % 2)
 };
 
 /* ------------------------------------------------------------------------------------------------
