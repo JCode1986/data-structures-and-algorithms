@@ -14,7 +14,7 @@ class HashMap {
 
   add(key,value) {
     let hashValue = this.hash(key);
-    if( !this.bucket[hashValue]) { this.bucket[hashValue] = []; }
+    if(!this.bucket[hashValue]) { this.bucket[hashValue] = []; }
     this.bucket[hashValue].push({[key]:value});
   }
 
