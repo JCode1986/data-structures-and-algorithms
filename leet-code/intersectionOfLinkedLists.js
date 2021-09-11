@@ -9,7 +9,7 @@
 
 // Note that the linked lists must retain their original structure after the function returns.
 
-// Custom Judge:
+// Custom judge:
 
 // The inputs to the judge are given as follows (your program is not given these inputs):
 
