@@ -9,12 +9,12 @@
 
 var getMinimumDifference = function(root) {
     let min = Number.POSITIVE_INFINITY;
-    let store = [];
+    let arr = [];
     let traverse = (node) => {
         if(!node) return;
-        if(node.left) traverse(node.left);
-        store.push(node.val);
-        if(node.right) traverse(node.right);
+        traverse(node.left);
+        arr.push(node.val);
+        traverse(node.right);
     }
     let getMininum = (arr) => {
     	for(let i = 1; i < arr.length; i++) {
@@ -22,6 +22,6 @@ var getMinimumDifference = function(root) {
       }
     } 
     traverse(root);
-    getMininum(store);
+    getMininum(arr);
     return min;
 };
