@@ -16,10 +16,10 @@
 // Output: false
 
 var hasPathSum = function(root, targetSum) {
-    if(root == null) return false;
+    if(!root) return false;
     let flag = false;
     dfs(root);
-    function dfs(node,sum=0){
+    function dfs(node,sum = 0){
         sum += node.val;
         node.left && dfs(node.left, sum);
         if((!node.left && !node.right) && sum===targetSum) flag = true
