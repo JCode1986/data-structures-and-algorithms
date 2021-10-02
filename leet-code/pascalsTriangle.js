@@ -14,20 +14,20 @@
 
 var generate = function(numRows) {
     let dp = [[1], [1, 1]]
-    if(numRows == 1) return dp[0];
-    if(numRows == 2) return dp[1];
+    if(numRows == 1) return [dp[0]];
+    if(numRows == 2) return dp;
     
-    let start = 1;
+    let col = 1;
     
     while(numRows != 2) {
         let arr = [1];
         for(let i = 1; i < dp.length; i++) {
-            arr.push(dp[i][start - 1] + dp[start][i])
+            arr.push(dp[col][i - 1] + dp[col][i])
         }
         arr.push(1);
         dp.push(arr);
         numRows--;
-        start++;
+        col++;
     }
     return dp;
 };
