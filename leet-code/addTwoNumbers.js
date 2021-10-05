@@ -26,7 +26,6 @@ var addTwoNumbers = function(l1, l2) {
     let ans = head;
     let arr1 = [];
     let arr2 = [];
-    let rev = [];
     
     while(c1) {
         arr1.push(c1.val);
@@ -38,13 +37,13 @@ var addTwoNumbers = function(l1, l2) {
         c2 = c2.next;
     }
     
-    let revSum1 = parseInt(arr1.reverse().join(''))
-    let revSum2 = parseInt(arr2.reverse().join(''))
+    let revSum1 = BigInt(arr1.reverse().join(''))
+    let revSum2 = BigInt(arr2.reverse().join(''))
     let res = (revSum1 + revSum2).toString()
     let len = res.length;
     
     while(len) {
-        ans.next = new ListNode(parseInt(res[len - 1]));
+        ans.next = new ListNode(BigInt(res[len - 1]));
         ans = ans.next;
         len--;
     }
