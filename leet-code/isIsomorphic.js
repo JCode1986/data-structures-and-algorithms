@@ -18,24 +18,12 @@
 // Output: true
 
 var isIsomorphic = function(s, t) {
-    let same = true;
-    if(s.length != t.length) return false;
-    let s1 = new Map();
-    let s2 = new Map();
-    
-    for(let i = 0; i < s.length; i++) {
-        !s1.get(s[i]) ? s1.set(s[i], i) : s1.set(s[i], i); 
-        !s2.get(t[i]) ? s2.set(t[i], i) : s2.set(t[i], i); 
+    const map = new Map();
+    const set = new Set();
+    for(let i = 0;i < s.length; i++) {
+        if(map.has(s[i]) && map.get(s[i]) !== t[i] || !map.has(s[i]) && set.has(t[i])) return false;
+        map.set(s[i],t[i]);
+        set.add(t[i]);
     }
-    
-    if(s1.size != s2.size) return false;
-    
-    let v1 = s1.values();
-    let v2 = s2.values();
-    
-    for(let i = 0; i < s1.size; i++) {
-        if(v1[i] != v2[i]) return false;
-    }
-    
     return true;
 };
